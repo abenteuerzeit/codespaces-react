@@ -32,7 +32,7 @@ class LessonLog extends React.Component {
                 <th className='id'>Id</th> 
                 <th className='date'>Date</th>
                 <th className='subject'>Subject</th>
-                <th className='duration'>Duration</th>
+                <th className='duration'>Time < br/><small>(min.)</small></th>
                 <th className='paid'>Paid</th>
                 <th className='notes'>Notes</th>
             </tr>
@@ -41,11 +41,34 @@ class LessonLog extends React.Component {
                 <td className='table-cell'>Nov. 22, 2022</td>
                 <td className='table-cell'>Present Simple. How to conjugate verbs using statements, negatives, and questions. </td>
                 <td className='table-cell'>60</td>
-                <td className='table-cell'>Yes</td>
-                <td className='table-cell'>Good lesson</td>
+                <td className='table-cell'>Nov. 23, 2022</td>
+                <td className='table-cell'>HW: Complete activity questions </td>
             </tr>
         </table>
-        <button className='btn btn-primary'>Add Lesson</button>
+
+        <hr />
+        <h2>New Lesson </h2>
+
+        <div id='nextLesson'>
+            <form>
+                <label for='date'>Date</label>
+                <input type='date' id='date' name='date' />
+                <label for='subject'>Subject</label>
+                <input type='text' id='subject' name='subject' />
+                <label for='duration'>Duration</label>
+                <input type='number' id='duration' name='duration' />
+                <label for='paid'>Paid</label>
+                <input type='date' id='paid' name='paid' />
+                <label for='notes'>Notes</label>
+                <textarea id='notes' name='notes' rows='4' cols='50'></textarea>
+            </form>
+            <button className='btn btn-primary'>
+                    <figure id='start-video-call'>
+                        <img src='https://img.icons8.com/ios/50/000000/video-call.png' alt='Start Video Call' />
+                        <figcaption>Start Lesson</figcaption>
+                    </figure>
+            </button>
+        </div>
     </div>
     );
   }
